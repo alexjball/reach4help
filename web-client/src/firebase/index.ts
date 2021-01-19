@@ -6,6 +6,7 @@ import 'firebase/firestore';
 import 'firebase/functions';
 import 'firebase/analytics';
 import 'firebase/performance';
+import 'firebase/storage';
 
 const config = {
   apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
@@ -23,7 +24,9 @@ firebase.initializeApp(config);
 export const firebaseAuth = firebase.auth();
 export const firestore = firebase.firestore();
 export const functions = firebase.functions();
+// Throws in tests
 export const analytics = firebase.analytics();
+// Throws in tests
 export const performance = firebase.performance();
 export const storage = firebase.storage();
 
